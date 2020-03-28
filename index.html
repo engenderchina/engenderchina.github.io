@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+	
+	<title>EnGender</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap&subset=chinese-simplified" rel="stylesheet"> 
+	<link rel='icon' href='favicon.ico'>
+	
+	<style>
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans SC', sans-serif;
+}
+
+.full{
+	height: 100vh;
+	color: white;
+}
+
+.background-imgs{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background: linear-gradient(-150deg, orange, #202);
+}
+
+.background-imgs img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	animation: background-img-fade 15s infinite linear;
+}
+.background-imgs img:nth-child(4){
+	animation-delay: 3s;
+}
+.background-imgs img:nth-child(3){
+	animation-delay: 6s;
+}
+.background-imgs img:nth-child(2){
+	animation-delay: 9s;
+}
+.background-imgs img:nth-child(1){
+	animation-delay: 12s;
+}
+@keyframes background-img-fade{
+	from{
+		opacity: 1;
+	}
+	15%{
+		opacity: 1;
+	}
+	20%{
+		opacity: 0;
+	}
+	95%{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.header{
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	width:90%;
+	max-width:850px;
+	font-size:0;
+	padding:20px;
+}
+
+.header>div{
+	display:inline-block;
+	width:33.33%;
+	height:100%;
+	font-size:14pt;
+	position:relative;
+}
+@media only screen and (max-width: 850px){
+	.header>div{
+		font-size: 12pt;
+	}
+}
+@media only screen and (max-width: 700px){
+	.header>div{
+		font-size: 10pt;
+	}
+}
+@media only screen and (max-width: 580px){
+	.header>div{
+		font-size: 8pt;
+	}
+}
+
+.header>div>span{
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	display:block;
+	text-align:center;
+}
+.header>div>span:first-child{
+	font-size:1.4em;
+}
+
+.divider{
+	position:relative;
+}
+.divider::after{
+	content:"";
+	width:4px;
+	background:white;
+	right:-2px;
+	top:0;
+	bottom:0;
+	position:absolute;
+	border-radius:2px;
+}
+
+.title{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	position:absolute;
+	width:90%;
+	max-width:1024px;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+}
+@media only screen and (max-width: 900px){
+	.title{
+		font-size: 0.8em;
+	}
+}
+@media only screen and (max-width: 700px){
+	.title{
+		font-size: 0.6em;
+	}
+}
+
+.title>div{
+	width:50%;
+}
+
+.title img{
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+}
+
+.title-right{
+	margin-left:5%;
+	margin-right:5%;
+	position:relative;
+	top:0;
+}
+.title-right>i{
+	display:block;
+	font-size:2em;
+}
+
+
+	</style>
+</head>
+<body>
+	
+	<div class='full'>
+		
+		<div class='background-imgs'>
+			<img src='assets/1.png'/>
+			<img src='assets/2.png'/>
+			<img src='assets/3.png'/>
+			<img src='assets/4.png'/>
+			<img src='assets/5.png'/>
+		</div>
+		
+		<div class='header'>
+			<div class='divider'>
+				<span>自 我 肯 定</span>
+				<span>Self Affirmation</span>
+			</div>
+			<div class='divider'>
+				<span>同 伴 力 量</span>
+				<span>Companionship</span>
+			</div>
+			<div>
+				<span>性 别 意 识</span>
+				<span>Gender Consciousness</span>
+			</div>
+		</div>
+		
+		<div class='title'>
+			<div class='divider'>
+				<img src='assets/stable.png'/>
+			</div>
+			<div class='title-right'>
+				<i>Collective Resolutions to China's Gender Deficit</i>
+				<span>敬 / 请 / 期 / 待</span>
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
